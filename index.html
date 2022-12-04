@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Centering divs</title>
+		<style>
+			* {box-sizing:border-box; margin:0; padding:0;}
+			.parentContainer {width:10rem; height:10rem; margin:0.5rem; background-color:#333;}
+			.childContainer {width:4rem; height:4rem; background-color:#666;}
+
+			.c01 {position:relative;}
+			.c01 .childContainer {position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
+
+			.c02 {position:relative;}
+			.c02 .childContainer{position:absolute; top:0; left:0; bottom:0; right:0; margin:auto;}
+
+			.c03 {display:flex; justify-content:center; align-items:center;}
+
+			.c04 {display:flex; justify-content:center;}
+			.c04 .childContainer {align-self:center;}
+
+			.c05 {display:flex;}
+			.c05 .childContainer {margin:auto;}
+
+			.c06 {display:grid; justify-content:center; align-items:center;}
+
+			.c07 {display:grid; place-items:center;}
+
+			.c08 {display:grid;}
+			.c08 .childContainer {align-self:center; justify-self:center;}
+
+			.c09 {display:grid;}
+			.c09 .childContainer {place-self:center;}
+
+			.c10 {display:grid;}
+			.c10 .childContainer {margin:auto;}
+		</style>
+	</head>
+	<body>
+		<!-- https://www.freecodecamp.org/news/how-to-center-a-div-with-css-10-different-ways/ -->
+
+		<!-- 01. How to use position: relative, absolute and top, left offset values -->
+		<div class="parentContainer c01">
+			<div class="childContainer"></div>
+		</div>
+
+		<!-- 02. How to use position: relative and absolute, top, left, right and bottom offset values and margin: auto -->
+		<div class="parentContainer c02">
+			<div class="childContainer"></div>
+		</div>
+
+		<!-- 03. How to use Flexbox, justify-content, and align-item -->
+		<div class="parentContainer c03">
+			<div class="childContainer"></div>
+		</div>
+
+		<!-- 04. How to Use Flexbox, justify-content, and align-self -->
+		<div class="parentContainer c04">
+			<div class="childContainer"></div>
+		</div>
+
+		<!-- 05. How to Use Flexbox and margin: auto -->
+		<div class="parentContainer c05">
+			<div class="childContainer"></div>
+		</div>
+
+		<!-- 06. How to Use Grid, justify-content, and align-items -->
+		<div class="parentContainer c06">
+			<div class="childContainer"></div>
+		</div>
+
+		<!-- 07. How to Use Grid and place-items -->
+		<div class="parentContainer c07">
+			<div class="childContainer"></div>
+		</div>
+
+		<!-- 08. How to Use Grid, align-self, and justify-self -->
+		<div class="parentContainer c08">
+			<div class="childContainer"></div>
+		</div>
+
+		<!-- 09. How to Use Grid and place-self -->
+		<div class="parentContainer c09">
+			<div class="childContainer"></div>
+		</div>
+
+		<!-- 10. How to Use Grid and margin: auto -->
+		<div class="parentContainer c10">
+			<div class="childContainer"></div>
+		</div>
+	</body>
+</html>
+[출처] 중앙정렬 10가지 방법 (하드코딩하는사람들) | 작성자 One Thing
